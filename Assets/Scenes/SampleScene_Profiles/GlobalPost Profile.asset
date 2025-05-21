@@ -58,19 +58,19 @@ MonoBehaviour:
     value: 0.75
   softKnee:
     overrideState: 1
-    value: 0.5
+    value: 1
   clamp:
     overrideState: 1
-    value: 65472
+    value: 65475.73
   diffusion:
     overrideState: 1
-    value: 7
+    value: 10
   anamorphicRatio:
     overrideState: 1
     value: 0
   color:
     overrideState: 1
-    value: {r: 1, g: 1, b: 1, a: 1}
+    value: {r: 0.9716981, g: 0.6535264, b: 0, a: 1}
   fastMode:
     overrideState: 1
     value: 0

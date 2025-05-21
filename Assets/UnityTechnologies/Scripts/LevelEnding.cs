@@ -14,13 +14,27 @@ public class LevelEnding : MonoBehaviour
     float m_Timer;
     bool m_HasAudioPlayed;
     public float displayTime = 2f;
+    private static bool keyCollected = false;
+
+    public void setKeyFlag(bool value)
+    {
+        keyCollected = value;
+        Debug.Log("Key collected: " + keyCollected);
+    }
+    public bool IsKeyCollected()
+    {
+        return keyCollected;
+    }
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject == player)
+        if (keyCollected)
         {
-            m_IsPlayerAtExit = true;
-            Debug.Log("Player has reached the exit.");
+            if (other.gameObject == player)
+            {
+                m_IsPlayerAtExit = true;
+                Debug.Log("Player has reached the exit.");
+            }
         }
     }
     public void CaughtPlayer()
@@ -43,6 +57,9 @@ public class LevelEnding : MonoBehaviour
             caughtBackgroundImageCanvasGroup.interactable = false;
             caughtBackgroundImageCanvasGroup.blocksRaycasts = false;
         }
+        
+        // We don't need to manage the objective UI visibility here anymore
+        // It's now handled by the ObjectiveManager
     }
 
     void Update()
