@@ -57,7 +57,7 @@ public class LevelEnding : MonoBehaviour
             caughtBackgroundImageCanvasGroup.interactable = false;
             caughtBackgroundImageCanvasGroup.blocksRaycasts = false;
         }
-        
+
         // We don't need to manage the objective UI visibility here anymore
         // It's now handled by the ObjectiveManager
     }
@@ -100,11 +100,10 @@ public class LevelEnding : MonoBehaviour
             {
                 Application.Quit();
             }
-            else if (Input.GetKeyDown(KeyCode.Return))
+            else if (Input.GetKeyDown(KeyCode.Y))
             {
-                // Uncomment the line below if you want to load a new scene instead of quitting
-                // UnityEngine.SceneManagement.SceneManager.LoadScene("NextLevel");
-                // Note: Make sure to replace "NextLevel" with the actual name of your next level scene.
+                // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                SceneManager.LoadScene(1);
                 Debug.Log("Loading next level...");
             }
             else if (Input.GetKeyDown(KeyCode.R))
@@ -115,7 +114,7 @@ public class LevelEnding : MonoBehaviour
             else
             {
                 // Display a message to the player
-                Debug.Log("Press R to restart, Enter to load next level, or Escape to quit.");
+                Debug.Log("Press R to restart, Y to load next level, or Escape to quit.");
             }
             Debug.Log("Level Completed!");
         }

@@ -109,13 +109,13 @@ public class DirectionalArrow : MonoBehaviour
             // then move to the next target automatically
             if (!currentTargetIsCollectible)
             {
-                Debug.Log($"Target {currentTargetIndex} reached! Switching to next target.");
+                // Debug.Log($"Target {currentTargetIndex} reached! Switching to next target.");
                 MoveToNextTarget();
             }
             else
             {
                 // For collectibles, we wait for the OnItemCollected method to be called
-                Debug.Log($"Target {currentTargetIndex} reached but needs to be collected!");
+                // Debug.Log($"Target {currentTargetIndex} reached but needs to be collected!");
             }
         }
     }

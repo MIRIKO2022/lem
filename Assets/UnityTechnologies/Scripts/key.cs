@@ -6,10 +6,11 @@ public class Key : MonoBehaviour
 
     public GameObject player;
 
-    LevelEnding levelEnding = new LevelEnding();
+    LevelEnding levelEnding;
+
     void Start()
     {
-
+        levelEnding = FindAnyObjectByType<LevelEnding>();
     }
 
     void Update()
