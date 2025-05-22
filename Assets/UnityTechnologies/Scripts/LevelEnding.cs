@@ -107,12 +107,7 @@ public class LevelEnding : MonoBehaviour
                 
                 Debug.Log("Loading next level...");
             }
-            else if (Input.GetKeyDown(KeyCode.T))
-            {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
-                // SceneManager.LoadScene(1);
-                Debug.Log("Loading previous level...");
-            }
+
             else if (Input.GetKeyDown(KeyCode.T))
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);

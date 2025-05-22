@@ -12,8 +12,8 @@ EditorBuildSettings:
     path: Assets/Scenes/BigLevel.unity
     guid: 12f3615f8709fb04597fcc508bbebe6c
   - enabled: 1
-    path: Assets/Scenes/levelthree.unity
-    guid: c051ce5591db88a4ba7badb082edfef3
+    path: Assets/Scenes/Colonial_graveyard.unity
+    guid: 7e30248a9c9312a41baa35b37acc475a
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 4276f55efae594150a9381ed0a8a075c,
       type: 2}
