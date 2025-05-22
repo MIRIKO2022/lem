@@ -371,7 +371,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   navMeshAgent: {fileID: 2922254171654230955}
-  waypoints: []
+  waypoints:
+  - {fileID: 0}
 --- !u!82 &9166278097545587824
 AudioSource:
   m_ObjectHideFlags: 0
