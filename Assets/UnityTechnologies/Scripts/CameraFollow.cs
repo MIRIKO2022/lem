@@ -32,7 +32,6 @@ public class CameraFollow : MonoBehaviour
         float mx = Input.GetAxis("Mouse X") * mouseSensitivity;
         float my = Input.GetAxis("Mouse Y") * mouseSensitivity;
         bool mouseMoved = Mathf.Abs(mx) > 0.01f || Mathf.Abs(my) > 0.01f;
-        bool moving    = Input.GetAxis("Horizontal") != 0f || Input.GetAxis("Vertical") != 0f;
 
         if (Input.GetKeyDown(recenterKey))
             recentering = true;
@@ -50,12 +49,6 @@ public class CameraFollow : MonoBehaviour
         {
             idleTimer = 0f;
             yaw += mx; pitch -= my;
-        }
-        else
-        {
-            idleTimer += Time.deltaTime;
-            if (moving && idleTimer >= idleDelay)
-                yaw = Mathf.LerpAngle(yaw, player.eulerAngles.y, Time.deltaTime * 5f);
         }
 
         pitch = Mathf.Clamp(pitch, -40f, 60f);
