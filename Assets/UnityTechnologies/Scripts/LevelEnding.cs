@@ -44,6 +44,8 @@ public class LevelEnding : MonoBehaviour
 
     void Start()
     {
+        keyCollected = false;
+        m_IsPlayerAtExit = false;
         // Ensure the exit UI is hidden at the start
         if (exitBackgroundImageCanvasGroup != null)
         {
@@ -104,7 +106,7 @@ public class LevelEnding : MonoBehaviour
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 // SceneManager.LoadScene(1);
-                
+
                 Debug.Log("Loading next level...");
             }
 
